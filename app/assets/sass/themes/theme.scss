@@ -1,0 +1,205 @@
+@import 'includes/dials';
+
+html, body {
+    font-family: 'Open Sans', sans-serif;
+}
+a {text-decoration: none;color: color('nephritis');}
+strong {font-weight: 700;}
+header {
+    padding-bottom: 2rem;
+    background: color('nephritis');
+    font-size: 0;
+
+    .prof-pic {
+        position: relative;
+        width: 20%;
+        height: 100%;
+        vertical-align: bottom;
+        text-align: center;
+
+        img {
+            position: relative;
+            bottom: -3rem;
+            width: 7rem;
+            height: auto;
+            border-radius: 100%;
+            border: 2px solid white;
+            vertical-align: bottom;
+        }
+    }
+    .intro {
+        width: 80%;
+        font-size: 1rem;
+    }
+    h1 {
+        margin-top: 2rem;
+        font-size: 6rem;
+        line-height: 1.2;
+        text-transform: uppercase;
+        font-family: 'Slabo 27px', serif;
+        color: color('clouds');
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.55);
+    }
+    h2 {
+        margin-top: 1.5rem;
+        font-size: 2rem;
+        line-height: 1;
+        color: color('nephritis','light');
+    }
+    h3 {
+        text-transform: uppercase;
+        line-height: 1.3;
+        color: color('clouds');
+    }
+    p {
+        margin-top: 1rem;
+        color: color('nephritis','dark');
+    }
+}
+
+main {
+    position: relative;
+    padding: 3rem 0 0;
+    text-align: center;
+    font-size: 0;
+    background-color: color('belizehole');
+}
+
+.main-content {
+    position: relative;
+    width: 80%;
+    font-size: 1rem;
+    overflow: hidden;
+}
+
+.navigation {
+    position: relative;
+    width: 20%;
+    font-size: 1rem;
+}
+
+.paper-content-wrapper {
+    z-index: 1;
+    width: 100%;
+    min-height: 10rem;
+}
+
+.paper-content {
+    position: relative;
+    z-index: 2;
+    width: 65%;
+    min-height: 23rem;
+    padding: 3rem 1rem;
+    background: color('clouds');
+    margin: 0 auto 3rem;
+    @include long-shadow(box, color('sunflower'), 200, false, false, left);
+
+    section {display: none;text-align: left;}
+    h5 {font-size: 4rem;line-height: 1.2;}
+    p, li {font-size: 1.2rem;line-height: 1.2;}
+
+    #contact {display: block;}
+
+    #contact, #hobbies {
+        h5, p, li {line-height: 2;}
+    }
+
+    #professional, #education, #projects {
+        li {font-size: 0;padding-bottom: 2rem;}
+        .left-side {width: 20%;text-align: center;}
+        .right-side {width: 80%;}
+        .company {}
+        .title {font-style: italic;}
+        .address {font-size: 1rem;font-weight: 700;font-style: italic;}
+        .description {}
+    }
+
+    #education {
+        h5, p, li {line-height: 2;}
+    }
+
+    #projects {
+        h5 {line-height: 2;}
+    }
+
+    #languages {
+        h5, li {line-height: 2.5;}
+        strong {display: inline-block;width: 8rem;}
+        span {display: inline-block;margin-right: 2rem;}
+        i {
+            display: inline-block;
+            font-size: 2rem;
+            line-height: 1;
+            color: color('sunflower');
+            margin-left: 0.4rem;
+        }
+    }
+}
+
+.triangle {
+    position: relative;;
+    bottom: -3rem;
+    width: 0;
+	height: 0;
+    margin: 0 auto;
+	border-left: 2rem solid transparent;
+	border-right: 2rem solid transparent;
+	border-bottom: 3rem solid color('belizehole');
+}
+
+.nav-bar {
+    li a {
+        display: inline-block;
+        width: 3rem;
+        vertical-align: middle;
+        margin: .5rem auto;
+        padding: 0.5rem 0;
+        font-size: 2rem;
+        background: color('nephritis');
+        color: color('clouds');
+        border: 0.2rem solid color('clouds');
+        border-radius: 100%;
+    }
+}
+
+footer {
+    padding: 2rem 0 3rem;
+    text-align: center;
+    font-size: 1rem;
+    color: color('clouds');
+    background: color('nephritis');
+
+    p {line-height: 2.1;}
+    a {color: color('clouds');font-weight: 700;}
+
+    map {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+        height: 22rem;
+
+        iframe {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            margin-top: -11rem;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    }
+    .footer-icons {
+        padding-top: 1rem;
+        font-size: 3rem;
+        line-height: 1;
+        text-align: center;
+        li {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 1rem;
+        }
+    }
+}
+
+@import 'includes/mediaqueries';
